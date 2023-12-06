@@ -1,0 +1,36 @@
+ <!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+<body>
+    <header>
+        <h1> FUN FACTS</h1>
+        <nav>
+            <ul>
+                <li> <a href="resume.html"> Home</a></li>
+                <li> <a href="facts.html"> Fun Facts</a></li>
+                <li> <a href="about.html"> About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h3> Here are some fun facts about snorlax!</h3>
+            <ol>
+                <li> He sleeps a lot!</li>
+                <li> He's really big </li>
+                <li> He has two teeth </li>
+                <li> His eyes are always closed </li>
+                <li> He is the <b> BEST </b> pokemon! </li>
+            </ol>
+        </section>
+    </main>
+    <footer>
+        <p> Nathan Verrill KSU 2023 </p>
+    </footer>
+
+</html>
