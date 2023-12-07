@@ -7,7 +7,6 @@
     <title>FUN FACTS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        /* Additional style for the buttons */
         .change-color-btn, .animate-list-btn {
             padding: 10px 20px;
             background-color: #333;
@@ -17,13 +16,11 @@
             margin-bottom: 10px;
         }
 
-        /* Custom animation for the ordered list */
         @keyframes moveCircular {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
 
-        /* Apply animation on button click */
         .animate-ol {
             animation: moveCircular 2s linear forwards;
         }
@@ -50,10 +47,8 @@
                 <li>His eyes are always closed</li>
                 <li>He is the <b>BEST</b> pokemon!</li>
             </ol>
-            <!-- Button to change background color -->
-            <button id="changeColorButton" class="change-color-btn">Change Background Color</button>
-            <!-- Button to animate the list -->
-            <button id="animateListButton" class="animate-list-btn">Animate the List</button>
+            <button id="changeColorButton" class="change-color-btn">This button changes the background to be the same color as Snorlax!</button>
+            <button id="animateListButton" class="animate-list-btn">This button makes the list run around (something snorlax could do more of) </button>
         </section>
     </main>
     <footer>
@@ -69,7 +64,7 @@
             document.getElementById('funFactsList').classList.add('animate-ol');
             setTimeout(() => {
                 document.getElementById('funFactsList').classList.remove('animate-ol');
-            }, 2000); // Time to match the animation duration
+            }, 2000); 
         });
     </script>
 </body>
