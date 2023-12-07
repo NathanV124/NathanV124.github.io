@@ -2,29 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Your custom CSS styles here */
+        .snorlax-svg {
+            width: 100px;
+            height: 100px;
+            fill: blue;
+            transition: transform 0.5s ease-in-out;
+        }
+        .snorlax-svg:hover {
+            transform: rotate(360deg);
+        }
+    </style>
+    <title>About Snorlax</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <header>
-        <h1> About</h1>
+        <h1>About</h1>
         <nav>
             <ul>
-                <li> <a href="resume.html"> Home </a> </li>
-                <li> <a href="facts.html"> Fun Facts</a> </li>
-                <li> <a href="about.html"> About</a> </li>
+                <li><a href="resume.html">Home</a></li>
+                <li><a href="facts.html">Fun Facts</a></li>
+                <li><a href="about.html">About</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section>
-            <h2> About </h2>   
-            <p> Click <a href= https://en.wikipedia.org/wiki/Snorlax><i><b>HERE</b></i></a> to head over to the wikipedia page for snorlax!</p>
+            <h2>About</h2>   
+            <p>Click <a href="https://en.wikipedia.org/wiki/Snorlax" target="_blank"><b><i>HERE</i></b></a> to head over to the Wikipedia page for Snorlax!</p>
+            <button id="modifyButton" class="btn btn-primary">Modify Page</button>
+            <svg class="snorlax-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm-1 15l-4-4 1.41-1.41L11 14.17l6.59-6.59L19 9l-7 7z"/>
+            </svg>
         </section>
     </main>
-
     <footer>
-        <p> Nathan Verrill KSU 2023</p>
+        <p>Nathan Verrill KSU 2023</p>
     </footer>
+
+    <script>
+        document.getElementById('modifyButton').addEventListener('click', function() {
+            // Modify the page when the button is clicked
+            document.body.style.backgroundColor = '#FFEBCD'; // Change background color
+            document.querySelector('h2').style.color = '#FF0000'; // Change h2 color
+        });
+    </script>
 </body>
 </html>
