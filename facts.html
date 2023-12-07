@@ -7,13 +7,14 @@
     <title>FUN FACTS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        /* Additional style for the button */
-        .change-color-btn {
+        /* Additional style for the buttons */
+        .change-color-btn, .animate-list-btn {
             padding: 10px 20px;
             background-color: #333;
             color: #fff;
             border: none;
             cursor: pointer;
+            margin-bottom: 10px;
         }
 
         /* Custom animation for the ordered list */
@@ -49,8 +50,10 @@
                 <li>His eyes are always closed</li>
                 <li>He is the <b>BEST</b> pokemon!</li>
             </ol>
-            <!-- The button for animating the list -->
-            <button id="animateListButton" class="change-color-btn">Animate the List</button>
+            <!-- Button to change background color -->
+            <button id="changeColorButton" class="change-color-btn">Change Background Color</button>
+            <!-- Button to animate the list -->
+            <button id="animateListButton" class="animate-list-btn">Animate the List</button>
         </section>
     </main>
     <footer>
@@ -58,6 +61,10 @@
     </footer>
 
     <script>
+        document.getElementById('changeColorButton').addEventListener('click', function() {
+            document.body.style.backgroundColor = '#ADD8E6';
+        });
+
         document.getElementById('animateListButton').addEventListener('click', function() {
             document.getElementById('funFactsList').classList.add('animate-ol');
             setTimeout(() => {
