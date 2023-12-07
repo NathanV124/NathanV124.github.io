@@ -1,43 +1,59 @@
- <!DOCTYPE html>
- <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://NathanV124.github.io/style.css">
+    <title>FUN FACTS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <style>
+        /* Additional style for the button */
+        .change-color-btn {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1> FUN FACTS</h1>
+        <h1>FUN FACTS</h1>
         <nav>
             <ul>
-                <li> <a href="resume.html"> Home</a></li>
-                <li> <a href="facts.html"> Fun Facts</a></li>
-                <li> <a href="about.html"> About</a></li>
+                <li><a href="resume.html">Home</a></li>
+                <li><a href="facts.html">Fun Facts</a></li>
+                <li><a href="about.html">About</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section>
-            <h3> Here are some fun facts about snorlax!</h3>
+            <h3>Here are some fun facts about snorlax!</h3>
             <ol>
-                <li> He sleeps a lot!</li>
-                <li> He's really big </li>
-                <li> He has two teeth </li>
-                <li> His eyes are always closed </li>
-                <li> He is the <b> BEST </b> pokemon! </li>
+                <li>He sleeps a lot!</li>
+                <li>He's really big</li>
+                <li>He has two teeth</li>
+                <li>His eyes are always closed</li>
+                <li>He is the <b>BEST</b> pokemon!</li>
             </ol>
-         <button id="colorButton" class="change-color-btn">This button changes the color of the page to the same color as snorlax!</button>
+            <!-- The button -->
+            <button id="colorButton" class="change-color-btn">This button changes the color of the page to the same color as Snorlax!</button>
         </section>
     </main>
     <footer>
-        <p> Nathan Verrill KSU 2023 </p>
+        <p>Nathan Verrill KSU 2023</p>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
     <script>
-       document.getElementById('colorButton').addEventListener('click', function() {
+        document.getElementById('colorButton').addEventListener('click', function() {
             document.body.style.backgroundColor = '#ADD8E6';
         });
     </script>
-
+</body>
 </html>
