@@ -4,6 +4,19 @@ body,p, ul, li{
     font-size:100%;
 }
 
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+h1.spin-header {
+  animation: spin 4s linear infinite; /* Apply the 'spin' animation to the h1 element */
+}
+
 h1{
     color: #FFF;
     text-align: center;
