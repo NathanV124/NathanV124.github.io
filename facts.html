@@ -15,6 +15,18 @@
             border: none;
             cursor: pointer;
         }
+
+        /* Custom animation */
+        @keyframes colorChangeAnimation {
+            0% { background-color: #F0E68C; }
+            50% { background-color: #ADD8E6; }
+            100% { background-color: #F0E68C; }
+        }
+
+        /* Apply animation on button click */
+        .animate-background {
+            animation: colorChangeAnimation 2s ease-in-out;
+        }
     </style>
 </head>
 <body>
@@ -30,7 +42,7 @@
     </header>
     <main>
         <section>
-            <h3>Here are some fun facts about snorlax!</h3>
+            <h3>Here are some fun facts about Snorlax!</h3>
             <ol>
                 <li>He sleeps a lot!</li>
                 <li>He's really big</li>
@@ -46,13 +58,13 @@
         <p>Nathan Verrill KSU 2023</p>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    
     <script>
         document.getElementById('colorButton').addEventListener('click', function() {
-            document.body.style.backgroundColor = '#ADD8E6';
+            document.body.classList.add('animate-background');
+            setTimeout(() => {
+                document.body.classList.remove('animate-background');
+                document.body.style.backgroundColor = '#ADD8E6';
+            }, 2000); // Time to match the animation duration
         });
     </script>
 </body>
