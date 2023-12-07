@@ -16,16 +16,15 @@
             cursor: pointer;
         }
 
-        /* Custom animation */
-        @keyframes colorChangeAnimation {
-            0% { background-color: #F0E68C; }
-            50% { background-color: #ADD8E6; }
-            100% { background-color: #F0E68C; }
+        /* Custom animation for the ordered list */
+        @keyframes moveCircular {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
 
         /* Apply animation on button click */
-        .animate-background {
-            animation: colorChangeAnimation 2s ease-in-out;
+        .animate-ol {
+            animation: moveCircular 2s linear forwards;
         }
     </style>
 </head>
@@ -43,15 +42,15 @@
     <main>
         <section>
             <h3>Here are some fun facts about Snorlax!</h3>
-            <ol>
+            <ol id="funFactsList">
                 <li>He sleeps a lot!</li>
                 <li>He's really big</li>
                 <li>He has two teeth</li>
                 <li>His eyes are always closed</li>
                 <li>He is the <b>BEST</b> pokemon!</li>
             </ol>
-            <!-- The button -->
-            <button id="colorButton" class="change-color-btn">This button changes the color of the page to the same color as Snorlax!</button>
+            <!-- The button for animating the list -->
+            <button id="animateListButton" class="change-color-btn">Animate the List</button>
         </section>
     </main>
     <footer>
@@ -59,11 +58,10 @@
     </footer>
 
     <script>
-        document.getElementById('colorButton').addEventListener('click', function() {
-            document.body.classList.add('animate-background');
+        document.getElementById('animateListButton').addEventListener('click', function() {
+            document.getElementById('funFactsList').classList.add('animate-ol');
             setTimeout(() => {
-                document.body.classList.remove('animate-background');
-                document.body.style.backgroundColor = '#ADD8E6';
+                document.getElementById('funFactsList').classList.remove('animate-ol');
             }, 2000); // Time to match the animation duration
         });
     </script>
